@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:request_application/auth/login.dart';
+import 'package:request_application/auth/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Login(),
-      routes: {'login' :  (context)=> const Login()},
+      routes: {'login' :  (context)=> const Login(),
+      'signup' :  (context)=> const Signup()
+      },
     );
   }
 }

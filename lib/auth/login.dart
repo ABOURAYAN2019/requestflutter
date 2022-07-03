@@ -16,7 +16,9 @@ class _LoginState extends State<Login> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(height: 10,) ,
+          const SizedBox(
+            height: 10,
+          ),
           Center(child: Image.asset('images/logo.jpg')),
           Container(
             padding: const EdgeInsets.all(20),
@@ -47,21 +49,23 @@ class _LoginState extends State<Login> {
                   height: 10,
                 ),
                 Row(
-                  children: 
-                 [
-                    const Text('Si vous étes pas inscris ,'),
+                  children: [
+                    const Text('Si vous n\'êtes pas encore  inscris ,'),
                     InkWell(
-                      onTap:() {
-                        
+                      onTap: () {
+                        Navigator.of(context).pushNamed('signup');
                       },
-                      
-                      child: const Text('Click ici !',style: TextStyle(color: Colors.blue),),
+                      child: const Text(
+                        'Click ici !',
+                        style: TextStyle(color: Colors.blue),
+                      ),
                     )
                   ],
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 ElevatedButton(
-                
                   child: const Text(
                     'Connexion',
                     style: TextStyle(fontSize: 14),

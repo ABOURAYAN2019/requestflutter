@@ -16,7 +16,9 @@ class _SignupState extends State<Signup> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(height: 10,) ,
+          const SizedBox(
+            height: 10,
+          ),
           Center(child: Image.asset('images/logo.jpg')),
           Container(
             padding: const EdgeInsets.all(20),
@@ -31,14 +33,17 @@ class _SignupState extends State<Signup> {
                         borderSide: BorderSide(width: 1),
                       )),
                 ),
-                 TextFormField(
+                const SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
                   decoration: const InputDecoration(
                       hintText: "Nom Compet",
                       prefixIcon: Icon(Icons.person),
                       border: OutlineInputBorder(
                         borderSide: BorderSide(width: 1),
                       )),
-                )
+                ),
                 const SizedBox(
                   height: 10,
                 ),
@@ -55,21 +60,23 @@ class _SignupState extends State<Signup> {
                   height: 10,
                 ),
                 Row(
-                  children: 
-                 [
-                    const Text('Si vous étes pas inscris ,'),
+                  children: [
+                    const Text('Si vous avez déja un compte ,'),
                     InkWell(
-                      onTap:() {
-                        
+                      onTap: () {
+                        Navigator.of(context).pushNamed('login');
                       },
-                      
-                      child: const Text('Click ici !',style: TextStyle(color: Colors.blue),),
+                      child: const Text(
+                        'Click ici !',
+                        style: TextStyle(color: Colors.blue),
+                      ),
                     )
                   ],
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 ElevatedButton(
-                
                   child: const Text(
                     'Créer Compte',
                     style: TextStyle(fontSize: 14),
